@@ -179,7 +179,7 @@ public class ClientApplication extends Application
 					hb3.getChildren().clear();
 					hb2.getChildren().clear();
 					
-					genBroj.setText("Bodovi: " + message.getValue());
+					genBroj.setText("Bodovi:\n" + message.getValue());
 					
 					if(!timer.isStopped())
 						timer.stop();
