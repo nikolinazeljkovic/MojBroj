@@ -15,10 +15,16 @@ public class ExpressionMessage
 
   public ExpressionMessage(List<Integer> numbers, int result, LocalDateTime startDateTime, long roundDurationInSeconds)
   {
-    super();
-		this.numbers = numbers;
-		this.result = result;
-		this.startDateTime = startDateTime;
-		this.roundDurationInSeconds = roundDurationInSeconds;
+        super();
+	this.numbers = numbers;
+	this.result = result;
+	this.startDateTime = startDateTime;
+	this.roundDurationInSeconds = roundDurationInSeconds;
   }
+  public List<Integer> getNumbers() {
+	  return numbers;
+	}
+  public void setNumbers(List<Integer> numbers) {
+	this.numbers = numbers;
+}
 }
