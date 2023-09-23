@@ -26,5 +26,31 @@ public class ExpressionMessage
 	}
   public void setNumbers(List<Integer> numbers) {
 	this.numbers = numbers;
-}
+  }
+  public int getResult() {
+	return result;
+	}
+  public void setResult(int result) {
+	this.result = result;
+	}
+  public LocalDateTime getStartDateTime() {
+	return startDateTime;
+	}
+  public void setStartDateTime(LocalDateTime startDateTime) {
+	this.startDateTime = startDateTime;
+	}
+  public long getRoundDurationInSeconds() {
+	return roundDurationInSeconds;
+	}
+  public void setRoundDurationInSeconds(long roundDurationInSeconds) {
+	this.roundDurationInSeconds = roundDurationInSeconds;
+	}
+  public static ExpressionMessage parseMessage(String message) throws MessageException {
+	  
+ }
+
+ @Override
+ public String toString() 
+ {
+ }
 }
