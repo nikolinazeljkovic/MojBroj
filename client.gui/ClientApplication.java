@@ -272,7 +272,7 @@ public class ClientApplication extends Application
 		List<Button> buttons = new ArrayList<>();
 		for (Integer broj : brojevi) {
 			Button b = new Button(String.valueOf(broj));
-			b.setStyle("-fx-background-color: SkyBlue");
+			b.setStyle("-fx-background-color: SkyBlue; -fx-font-size: 23px");
 			b.setMinSize(50, 50);
 			buttons.add(b);
 
