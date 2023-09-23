@@ -15,6 +15,13 @@ public class Message {
 	this.value = value;
 	}
 
+  public static Message parseMessage(String message) throws MessageException {
+	String[] split = message.split(SEPARATOR);
+	if(split.length != 2 || Arrays.stream(Header.values()).noneMatch(header -> header.getValue().equals(split[0])))
+	    throw new MessageException("Invalid message");
+	return new Message(split[0], split[1]);
+	} 
+	
   public String getHeader() {
 	return header;
 	}
