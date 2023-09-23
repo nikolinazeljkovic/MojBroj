@@ -93,6 +93,7 @@ public class ClientApplication extends Application
 		// prije nego posalje da je game spreman
 		VBox root = new VBox(50);
 		root.setAlignment(Pos.CENTER);
+		root.setBackground(new Background(new BackgroundFill(Color.BEIGE,null,null)));
 		HBox hb1 = new HBox(10);
 		HBox hb2 = new HBox(10);
 		HBox hb3 = new HBox(10);
@@ -101,10 +102,15 @@ public class ClientApplication extends Application
 		HBox hb6 = new HBox(10);
 
 		hb1.setAlignment(Pos.CENTER);
+		hb1.setBackground(new Background(new BackgroundFill(Color.BEIGE,null,null)));
 		hb2.setAlignment(Pos.CENTER);
+		hb2.setBackground(new Background(new BackgroundFill(Color.BEIGE,null,null)));
 		hb3.setAlignment(Pos.CENTER);
+		hb3.setBackground(new Background(new BackgroundFill(Color.BEIGE,null,null)));
 		hb4.setAlignment(Pos.CENTER);
+		hb4.setBackground(new Background(new BackgroundFill(Color.BEIGE,null,null)));
 		hb5.setAlignment(Pos.CENTER);
+		hb5.setBackground(new Background(new BackgroundFill(Color.BEIGE,null,null)));
 		HBox.setMargin(hb5, new Insets(20, 0, 0, 0));
 		hb6.setAlignment(Pos.CENTER);
 		hb5.setSpacing(20);
