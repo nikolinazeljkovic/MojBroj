@@ -116,7 +116,7 @@ public class ClientApplication extends Application
 		hb5.setSpacing(20);
 
 		Text genBroj = new Text();
-		genBroj.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 60));
+		genBroj.setFont(Font.font(STYLESHEET_CASPIAN, FontWeight.BOLD, 57));
 		hb1.getChildren().add(genBroj);
 
 		Button plus = new Button("+");
