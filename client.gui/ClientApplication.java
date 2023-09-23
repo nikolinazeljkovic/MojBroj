@@ -115,13 +115,13 @@ public class ClientApplication extends Application
 		Button puta = new Button("*");
 		Button podijeljeno = new Button("/");
 		
-		plus.setStyle("-fx-background-color: #f5deb3"); // za zelenu boju dugmadi
+		plus.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px"); 
 		plus.setMinSize(40, 40);
-		minus.setStyle("-fx-background-color: #f5deb3");
+		minus.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px");
 		minus.setMinSize(40, 40);
-		puta.setStyle("-fx-background-color: #f5deb3");
+		puta.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px");
 		puta.setMinSize(40, 40);
-		podijeljeno.setStyle("-fx-background-color: #f5deb3");
+		podijeljeno.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px");
 		podijeljeno.setMinSize(40, 40);
 
 		hb2.getChildren().addAll(plus, minus, puta, podijeljeno);
