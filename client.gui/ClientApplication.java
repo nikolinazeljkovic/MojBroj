@@ -134,8 +134,9 @@ public class ClientApplication extends Application
 		hb4.getChildren().addAll(poruka, unos);
 
 		Button obrisi = new Button("Obrisi unos");
+		obrisi.setStyle("-fx-font-size: 2em; -fx-border-color: #696969;");
 		Button potvrdi = new Button("Potvrdi unos");
-		potvrdi.setStyle("-fx-font-size: 2em; -fx-background-color: Coral; -fx-text-fill: White");
+		potvrdi.setStyle("-fx-font-size: 2em; -fx-border-color: #696969; -fx-background-color: Coral; -fx-text-fill: White");
 		hb5.getChildren().addAll(obrisi, potvrdi);
 
 		root.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6);
