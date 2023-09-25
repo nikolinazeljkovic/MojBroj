@@ -184,12 +184,7 @@ public class ClientApplication extends Application
 					if(!timer.isStopped())
 						timer.stop();
 				} 
-//				else if(message.getHeader().equals(Header.WAIT.getValue())) {
-//					
-//					genBroj.setText("Cekaj protivnika...");
-//					potvrdi.setDisable(true);
-//					timer.stop();
-//				}
+
 				
 			} catch (MessageException e) {
 				e.printStackTrace();
