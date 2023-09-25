@@ -72,11 +72,28 @@ public class ExpressionMessage
 			
 		return new ExpressionMessage(numbers, result, startDateTime, roundDurationInSeconds);
 		}
-	  
+	  throw new MessageException("Invalid expression message!");
  }
 
  @Override
  public String toString() 
  {
+	StringBuilder sb = new StringBuilder();
+		
+	Iterator<Integer> iterator = numbers.iterator();
+		
+	 while(iterator.hasNext()) {
+	     Integer integer = iterator.next();
+	     sb.append(integer);
+	     if(iterator.hasNext())
+             sb.append(",");
+		}
+	 sb.append("#");
+	 sb.append(result);
+    	 sb.append("#");
+  	 sb.append(startDateTime);
+	 sb.append("#");
+	 sb.append(roundDurationInSeconds);
+	 return sb.toString();
  }
 }
