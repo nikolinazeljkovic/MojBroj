@@ -49,6 +49,29 @@ public class ExpressionMessage
 	this.roundDurationInSeconds = roundDurationInSeconds;
 	}
   public static ExpressionMessage parseMessage(String message) throws MessageException {
+	List<Integer> numbers = new ArrayList<Integer>();
+	int result;
+	LocalDateTime startDateTime;
+	long roundDurationInSeconds;
+	String[] split = message.split("#");
+
+	if(split.length == 4) {
+		//rekreiramo niz brojeva
+		String[] split1 = split[0].split(",");
+		for(String strNum : split1)
+			numbers.add(Integer.valueOf(strNum));
+			
+		//trazeni broj
+		result = Integer.valueOf(split[1]);
+		
+		//vrijeme pocetka prve runde
+		startDateTime = LocalDateTime.parse(split[2]);
+			
+		//trajanje runde
+		roundDurationInSeconds = Long.parseLong(split[3]);
+			
+		return new ExpressionMessage(numbers, result, startDateTime, roundDurationInSeconds);
+		}
 	  
  }
 
