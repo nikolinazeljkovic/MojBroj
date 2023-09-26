@@ -128,9 +128,9 @@ public class ClientApplication extends Application
 		plus.setMinSize(40, 40);
 		minus.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );");
 		minus.setMinSize(40, 40);
-		puta.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px"; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );");
+		puta.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );");
 		puta.setMinSize(40, 40);
-		podijeljeno.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );"");
+		podijeljeno.setStyle("-fx-background-color: #f5deb3; -fx-font-size: 20px; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );");
 		podijeljeno.setMinSize(40, 40);
 
 		hb2.getChildren().addAll(plus, minus, puta, podijeljeno);
