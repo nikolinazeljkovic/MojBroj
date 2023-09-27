@@ -20,7 +20,17 @@ public Round(Expression ex) {
 		return expression;
 	}
 
-	//TODO
+	public void setExpression(Expression expression) {
+		this.expression = expression;
+	}
+
+	public Map<Player, Integer> getPlayersPoints() {
+		return playersPoints;
+	}
+
+	public void setPlayersPoints(Map<Player, Integer> points) {
+		this.playersPoints = points;
+	}
 	
 }
 
