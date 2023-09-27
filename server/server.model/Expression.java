@@ -47,9 +47,24 @@ public class Expression {
 		}
 		this.expression += numbers.get(NUMBER_COUNT - 1);
 	}
+	
+	public int calculatePointsForAttempt(int attempt) {
+		int difference = Math.abs(result - attempt);
+		int calculatedPoints;
+		
+		if(difference == 0)
+			calculatedPoints = 10;
+		else if(difference == 1)
+			calculatedPoints = 8;
+		else if(difference <= 5)
+			calculatedPoints = 5;
+		else if(difference <= 10)
+			calculatedPoints = 2;
+		else
+			calculatedPoints = 0;
+		
+		return calculatedPoints;
+	}
 
-
-	//TODO STEFAN
-
-
+	//TODO
 }
