@@ -81,6 +81,10 @@ public class Game extends Thread{
 		}
 		
 	}
+	@Override
+	public String toString() {
+		return "Game [" + igrac1 + ", " + igrac2 + "]";
+	}
 
 }
 	
