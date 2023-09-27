@@ -22,7 +22,7 @@ public class Expression {
 		this.result = calculate(expression);
 
 	}
-  //TODO
+
 	
 	private void generate() {
 
@@ -47,6 +47,9 @@ public class Expression {
 		}
 		this.expression += numbers.get(NUMBER_COUNT - 1);
 	}
+
+
+	//TODO STEFAN
 
 
 }
