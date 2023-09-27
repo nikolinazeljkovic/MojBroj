@@ -12,4 +12,15 @@ public class Round {
 		this.expression = new Expression();
 		this.playersPoints = new HashMap<Player, Integer>();
 	}
-//TODO
+public Round(Expression ex) {
+		this.expression = ex;
+	}
+
+	public Expression getExpression() {
+		return expression;
+	}
+
+	//TODO
+	
+}
+
