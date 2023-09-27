@@ -23,3 +23,30 @@ public class Expression {
 
 	}
   //TODO
+	
+	private void generate() {
+
+		for (int i = 0; i < NUMBER_COUNT; i++) {
+			int num = rand.nextInt(MAX_NUMBER);
+			numbers.add(num);
+		}
+
+		for (int i = 0; i < OPERATION_COUNT; i++) {
+			Operation operation;
+
+			do {
+				operation = Operation.values()[rand.nextInt(Operation.values().length)];
+			} while (operation == Operation.DIVISION && numbers.get(i + 1) == 0); // ponavljamo generisanje operacije
+																					// ako je djelilac jednak 0
+
+			op.add(operation.getValue());
+		}
+
+		for (int i = 0; i < OPERATION_COUNT; i++) {
+			this.expression += numbers.get(i).toString() + op.get(i);
+		}
+		this.expression += numbers.get(NUMBER_COUNT - 1);
+	}
+
+
+}
