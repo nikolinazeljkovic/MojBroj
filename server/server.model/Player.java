@@ -78,8 +78,6 @@ public class Player extends Thread{
 					rounds[i].getPlayersPoints().put(this, pointsForThisRound);
 				}
 				
-//				Message waitMessage = new Message(Header.WAIT.getValue(), "Wait for opponent to finish...");
-//				sendMsg(waitMessage.toString());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -95,11 +93,11 @@ public class Player extends Thread{
 		socket.close();
 	}
 
-	public void sendMsg(String msg) {// od strane servera se salje poruka
-		out.println(msg);// salje se poruka u vidu stringa igracu, koristi se kod slanja pitanja
+	public void sendMsg(String msg) {   // od strane servera se salje poruka
+		out.println(msg);           // salje se poruka u vidu stringa igracu, koristi se kod slanja pitanja
 	}
 
-	////////// metoda getResponse da prima izraz od klijenta, dopuniti ili ne
+	//metoda getResponse da prima izraz od klijenta, dopuniti ili ne
 	public String getResponse() throws IOException {
 		String message = this.in.readLine(); // cita odgovor od klijenta
 		return message;
