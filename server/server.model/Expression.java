@@ -37,7 +37,7 @@ public class Expression {
 			do {
 				operation = Operation.values()[rand.nextInt(Operation.values().length)];
 			} while (operation == Operation.DIVISION && numbers.get(i + 1) == 0); // ponavljamo generisanje operacije
-																					// ako je djelilac jednak 0
+											      // ako je djelilac jednak 0
 
 			op.add(operation.getValue());
 		}
@@ -66,5 +66,23 @@ public class Expression {
 		return calculatedPoints;
 	}
 
-	//TODO
+	public List<Integer> getNumbers() {
+		return this.numbers;
+	}
+
+	public List<String> getOperations() {
+		return this.op;
+	}
+
+	public String getExpression() {
+		return expression;
+	}
+
+	public int getResult() {
+		return result;
+	}
+	@Override
+	public String toString() {
+		return expression;
+	}
 }
