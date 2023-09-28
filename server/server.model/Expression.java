@@ -12,9 +12,9 @@ public class Expression {
 	public static final int OPERATION_COUNT = NUMBER_COUNT - 1;
 
 	private Random rand = new Random();
-	private ArrayList<Integer> numbers = new ArrayList<>(); // svi brojevi
-	private ArrayList<String> op = new ArrayList<>(); // kao i operacije se salju klijentu preko mreze
-	private int result; // rez se salje klijentu isto preko soketa
+	private ArrayList<Integer> numbers = new ArrayList<>();     //svi brojevi
+	private ArrayList<String> op = new ArrayList<>();           //kao i operacije se salju klijentu preko mreze
+	private int result;                                    //rez se salje klijentu isto preko soketa
 	private String expression = "";
 
 	public Expression() {
@@ -110,5 +110,18 @@ public class Expression {
 			throw new IllegalArgumentException("Invalid term \"" + term + "\"");
 		}
 		return product;
+	}
+
+	public static int calculate(String expr) {  //racuna izraz iz stringa , koristi donju funkciju
+		Matcher m = EXPR_RE.matcher(expr);
+		int sum = 0;
+		int matchEnd;
+		for (matchEnd = -1; m.find(); matchEnd = m.end()) {
+			sum += (("-".equals(m.group(1))) ? -1 : +1) * evalTerm(m.group(2));
+		}
+		if (matchEnd != expr.length()) {
+			throw new IllegalArgumentException("Invalid expression \"" + expr + "\"");
+		}
+		return sum;
 	}
 }
