@@ -73,8 +73,8 @@ public class Game extends Thread{
 			System.out.println("Player " + igrac1 + " disconnected");
 			igrac2.closeConnection();
 			System.out.println("Player " + igrac2 + " disconnected");
-			Server.removePlayer(igrac1);
-			Server.removePlayer(igrac2);
+			Server.addPlayer(igrac1);
+			Server.addPlayer(igrac2);
 			System.out.println(this + " ended");
 		} catch (IOException e) {
 			e.printStackTrace();
